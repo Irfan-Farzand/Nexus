@@ -20,7 +20,7 @@ class ProfileProvider with ChangeNotifier {
   String? get uid => FirebaseAuth.instance.currentUser?.uid;
 
   // Laravel server base URL
-  static const String baseUrl = 'https://cscollaborators.online/ho/api';
+  static const String baseUrl = '';
 
   Future<void> fetchProfile() async {
     if (uid == null) return;
@@ -91,7 +91,7 @@ class ProfileProvider with ChangeNotifier {
           final body = await response.stream.bytesToString();
           final data = jsonDecode(body);
 
-          // ✅ Dono 'url' aur 'path' check karo
+          // Dono 'url' aur 'path' check karo
           photoUrl = data['url'] ?? data['path'];
 
           debugPrint('Server response: $photoUrl');
@@ -109,7 +109,7 @@ class ProfileProvider with ChangeNotifier {
 
       // Only add photoUrl if we have a new one
       if (photoUrl != null) {
-        // ✅ Firestore mein relative path hi save karo
+        //  Firestore mein relative path hi save karo
         updateData['photoUrl'] = photoUrl;
       }
 
