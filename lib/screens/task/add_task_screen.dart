@@ -111,7 +111,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     try {
       var request = http.MultipartRequest(
         'POST',
-        Uri.parse('https://cscollaborators.online/ho/api/upload/file'),
+        Uri.parse(''),
       );
 
       request.files.add(await http.MultipartFile.fromPath('file', file.path));
@@ -121,7 +121,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         final resString = await response.stream.bytesToString();
         final data = jsonDecode(resString);
 
-        // ✅ CORRECT: 'url' field access karo, 'path' nahi
+        // CORRECT: 'url' field access karo, 'path' nahi
         return data['url'];
       } else {
         _logger.e("File upload failed: ${response.statusCode}");
