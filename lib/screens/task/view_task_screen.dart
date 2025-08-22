@@ -224,5 +224,5 @@ String getFullImageUrl(String? photoUrl) {
     return photoUrl;
   }
 
-  return 'https://cscollaborators.online$photoUrl';
+  return 'url$photoUrl';
 }
