@@ -6,7 +6,7 @@ This project is built with **Flutter + Provider** for state management, and inte
 
 ---
 
-## 🚀 Features
+## Features
 
 ###  User Authentication & Profile Management
 - Secure sign up and login with email & password (Firebase Auth).
@@ -29,7 +29,7 @@ This project is built with **Flutter + Provider** for state management, and inte
 - **Task assignment** to team members.
 - **Activity feed** showing updates (status changes, new comments, assignments).
 
-### ✅Kanban Board & List Views
+### Kanban Board & List Views
 - Drag-and-drop Kanban board (e.g., *To-Do → In Progress → Done → Blocked*).
 - Toggle between Kanban board and traditional list view.
 
@@ -42,9 +42,8 @@ This project is built with **Flutter + Provider** for state management, and inte
 - Robust sync with **Firebase Firestore** when online.
 - Handles conflicts gracefully to ensure data integrity.
 
-### Planned Features
-- Image & file attachments for tasks (camera, gallery, file system).
-- Previews of attached files within task details.
+### File & Image Upload
+- Developed Laravel API for task attachments (images/files) with preview support.
 
 ---
 
