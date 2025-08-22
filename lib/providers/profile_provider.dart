@@ -165,7 +165,7 @@ class ProfileProvider with ChangeNotifier {
     }
 
     // Agar relative path hai to direct /ho/public/storage/ add karo
-    return 'https://cscollaborators.online/$photoUrl';
+    return 'url/$photoUrl';
   }
   // 🔹 Helper method to validate if a URL is valid for NetworkImage
   bool isValidNetworkImageUrl(String? url) {
